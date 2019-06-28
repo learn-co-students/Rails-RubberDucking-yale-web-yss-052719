@@ -17,11 +17,12 @@ class DucksController < ApplicationController
   end
 
   def create
-    @duck.create(duck_params)
+    @duck = Duck.create(duck_params)
     redirect_to(duck_path(@duck))
   end
 
   def update
+    @duck = Duck.find(params[:id])
     @duck.update(duck_params)
     redirect_to(duck_path(@duck))
   end

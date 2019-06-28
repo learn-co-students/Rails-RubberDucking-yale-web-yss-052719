@@ -1,6 +1,7 @@
 <h1> New Duck </h1>
 <%= form_for(@duck) do |x| %>
-    <%= x.text_field :name %>
-    <%= x.text_field :description %>
-    <%= collection_select :student_id, Student.all, :name, :id %>
+    Name: <%= x.text_field :name %>
+    Description: <%= x.text_field :description %>
+    <%= x.collection_select :student_id, Student.all, :id, :name%>
+    <%= x.submit %>
     <% end %>
