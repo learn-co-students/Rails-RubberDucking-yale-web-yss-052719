@@ -1,0 +1,6 @@
+<h1> Edit Duck </h1>
+<%= form_for(@duck) do |x| %>
+    <%= x.text_field :name %>
+    <%= x.text_field :description %>
+    <%= collection_select :student_id, Student.all, :name, :id %>
+    <% end %>

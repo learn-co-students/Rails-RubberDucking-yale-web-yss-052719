@@ -1,0 +1,7 @@
+<h1><%= @student.name %></h1>
+<h2><%= @student.mod %></h2>
+<ul>
+    <% @student.ducks.each do |x| %>
+        <%= x.name %>
+        <% end %>
+</ul>
